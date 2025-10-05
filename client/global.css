@@ -1,0 +1,100 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    /* Light theme (fallback) */
+    --background: 0 0% 100%;
+    --foreground: 240 5% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 10%;
+
+    /* Brand accents for light */
+    --primary: 199 94% 40%; /* cyan */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 241 59% 59%; /* indigo */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 3% 45%;
+
+    --accent: 84 100% 59%; /* neon chartreuse */
+    --accent-foreground: 240 5% 10%;
+
+    --destructive: 4 100% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 199 94% 40%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 240 5% 20%;
+    --sidebar-primary: 241 59% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 6% 95%;
+    --sidebar-accent-foreground: 240 5% 20%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 84 100% 59%;
+  }
+
+  .dark {
+    /* Futuristic dark neon palette */
+    --background: 240 3% 12%; /* #1C1C1E */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+
+    --card: 240 5% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 5% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 199 94% 67%; /* #5AC8FA */
+    --primary-foreground: 240 5% 12%;
+
+    --secondary: 241 59% 59%; /* #5856D6 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 4% 18%;
+    --muted-foreground: 240 2% 65%; /* #A1A1A6 approx */
+
+    --accent: 84 100% 59%; /* #ADFF2F */
+    --accent-foreground: 240 5% 12%;
+
+    --destructive: 4 100% 60%; /* #FF3B30 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 4% 22%;
+    --input: 240 4% 22%;
+    --ring: 84 100% 59%;
+
+    --sidebar-background: 240 3% 12%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 84 100% 59%;
+    --sidebar-primary-foreground: 240 5% 12%;
+    --sidebar-accent: 240 4% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 4% 22%;
+    --sidebar-ring: 199 94% 67%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground antialiased; }
+}
